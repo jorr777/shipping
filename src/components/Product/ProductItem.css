@@ -1,0 +1,234 @@
+.product_information {
+  display: grid;
+  grid-template-columns: minmax(200px, 304px) minmax(290px, auto) minmax(
+      220px,
+      286px
+    );
+  gap: 10px;
+}
+.product_info_main_img {
+  width: 100%;
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+.product_info_image {
+  overflow: hidden;
+  margin-top: 10px;
+  max-height: 500px;
+}
+
+.product_info_images {
+  margin-top: 7px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  gap: 7px;
+}
+.product_info_main_img {
+  width: 100%;
+  padding-top: 100%;
+  background: url("../../assets/productItemImage1.jpeg") no-repeat center;
+  background-size: cover;
+}
+.product_info_images > img {
+  width: 100%;
+  max-height: 90px;
+  min-height: 90px;
+}
+.car_lot_information {
+  margin-top: 10px;
+}
+.car_lot_information > div {
+  margin-top: 7px;
+}
+.car_info_item {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 12px;
+  font-size: 14px;
+  gap: 10px;
+  padding: 5px;
+  color: #5f6c7b;
+}
+
+.car_info_list {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.info_types {
+  display: flex;
+}
+
+.info_type.active {
+  background-color: var(--color1);
+  color: white;
+}
+
+.title__Info__Field {
+  background-color: var(--color1);
+  color: var(--color2);
+  padding: 7px 10px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 40px;
+  box-shadow: var(--blur1);
+  font-size: 1rem;
+}
+
+.bid_Information_title {
+  color: white;
+}
+
+.info_type {
+  background-color: white;
+  width: 50%;
+}
+
+.bid_Information {
+  padding-top: 10px;
+  background-color: white;
+}
+
+.bid_Information_List {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+  gap: 10px;
+  max-height: 420px;
+  height: 100%;
+}
+
+.bid_Inforamtion_item {
+  border-radius: 16px;
+}
+
+.Bid_form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+}
+
+.bid__current_bid {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.bid__buy_item {
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bid_button {
+  background-color: #3da9fcb2;
+}
+
+.buy_button {
+  background-color: white;
+  border: 1px solid var(--color2);
+  color: var(--color2);
+}
+.sale_Information > .title__Info__Field {
+  color: white;
+}
+.sale_Information {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sale_Information .car_info_item {
+  height: auto;
+}
+
+.time_number {
+  color: red;
+}
+
+.product_image_fone {
+  background: #09406730;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view_more {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+@media (max-width: 959px) {
+  .product_info_images {
+    grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+  }
+  .product_info_images > img {
+    max-height: 75px;
+    min-height: 75px;
+  }
+}
+
+@media (max-width: 769px) {
+  .car_lot_information {
+    margin: 0;
+  }
+  .view_more {
+    display: block;
+  }
+  .product_information {
+    grid-template-columns: auto;
+    position: relative;
+  }
+  .bid_Information {
+    height: auto;
+  }
+  .car_lot_information > div {
+    margin-bottom: 10px;
+  }
+  .bid_Information_List {
+    position: fixed;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+  .product_info_images {
+    grid-template-columns: repeat(5, minmax(148px, 1fr));
+    overflow: scroll;
+  }
+
+  .product_info_main_img {
+    padding-top: calc(30% + 25vw);
+  }
+  .product_image_fone {
+    display: none;
+  }
+  .product_info_images > img:not(.product_info_main_img) {
+    min-height: 90px;
+    max-height: 90px;
+  }
+}
+
+@media (max-width: 320px) {
+  .title__Info__Field {
+    font-size: 0.925rem;
+  }
+  .product_info_main_img {
+    width: calc(100vw - 32px);
+  }
+}

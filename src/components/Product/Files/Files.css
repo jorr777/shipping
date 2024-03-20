@@ -1,0 +1,22 @@
+.files {
+  max-width: 468px;
+  width: 100%;
+}
+.files_list {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.files > .title__Info__Field {
+  color: white;
+}
+
+.files_list_item {
+  width: 80px;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
